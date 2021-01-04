@@ -17,18 +17,36 @@ const Container = styled.div`
   left: 0px;
   background: rgba(1, 16, 38);
   color: white;
-  padding: 2rem;
+  padding: 1rem;
   z-index: 101;
+  padding-left: 50px;
 `;
 
 const Button = styled(_Button)`
-  width: 10rem;
+  width: 8rem;
+  margin: 5px;
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-top: 1rem;
+  display: inline-block;
+  margin-left: 30px;
+  @media (max-width: 967px) and (min-width: 789px) {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 653px) and (min-width: 561px) {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 513px) {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const CookiePolicy = ({ actions }) => {
@@ -48,12 +66,7 @@ const CookiePolicy = ({ actions }) => {
             More Info
           </Link>
         </Button>
-        <Button
-          onClick={hideCookiePolicy}
-          style={{ marginLeft: '1rem' }}
-          variant="contained"
-          color="primary"
-        >
+        <Button onClick={hideCookiePolicy} variant="contained" color="primary">
           Accept
         </Button>
       </ButtonContainer>
