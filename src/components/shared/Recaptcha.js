@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 1rem 0;
+  margin-bottom: 1rem;
 `;
 
 const ErrorMessage = styled.p`
